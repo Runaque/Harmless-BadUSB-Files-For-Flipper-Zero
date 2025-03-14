@@ -1,0 +1,24 @@
+REM Flipper Zero payload to update Windows via PowerShell
+REM Made by Runaque
+
+GUI r
+DELAY 1000
+STRING powershell
+DELAY 1500
+ENTER
+DELAY 2000
+STRING Install-Module PSWindowsUpdate -Force
+DELAY 500
+ENTER
+DELAY 2000
+STRING Import-Module PSWindowsUpdate
+DELAY 500
+ENTER
+DELAY 2000
+STRING Get-WindowsUpdate -Install -AcceptAll
+DELAY 500
+ENTER
+DELAY 2000
+STRING Restart-Computer -Force
+DELAY 500
+ENTER

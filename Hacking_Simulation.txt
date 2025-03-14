@@ -1,0 +1,70 @@
+REM Flipper Zero - Hacking Simulation Prank (100% Progress)
+REM Made by Runaque
+
+GUI r
+DELAY 1000
+STRING powershell -NoProfile -WindowStyle Maximized
+DELAY 1500
+ENTER
+DELAY 2000
+
+REM Fake Hacking Commands (Loop for 60 seconds)
+STRING for ($i=0; $i -le 100; $i+=2) {
+ENTER
+STRING Write-Host "[+] Connecting to Remote Host..." -ForegroundColor Green
+ENTER
+STRING Start-Sleep -Seconds 1
+ENTER
+STRING Write-Host "[+] Bypassing Firewall..." -ForegroundColor Yellow
+ENTER
+STRING Start-Sleep -Seconds 1
+ENTER
+STRING Write-Host "[+] Injecting Payload..." -ForegroundColor Red
+ENTER
+STRING Start-Sleep -Seconds 1
+ENTER
+STRING Write-Host "[+] Exfiltrating Data... (Progress: $i%)" -ForegroundColor Cyan
+ENTER
+STRING Start-Sleep -Seconds 1
+ENTER
+STRING if ($i -eq 100) { Write-Host "[+] Data Exfiltration Complete!" -ForegroundColor Green; Start-Sleep -Seconds 3 }
+ENTER
+STRING }
+ENTER
+
+DELAY 2000
+
+REM Show Final Scary Message - Red Background, White Bold Text (Wider Window)
+STRING Add-Type -AssemblyName System.Windows.Forms
+ENTER
+DELAY 500
+STRING $form = New-Object System.Windows.Forms.Form
+ENTER
+STRING $form.Text = "System Breach"
+ENTER
+STRING $form.BackColor = 'Red'
+ENTER
+STRING $form.Width = 650
+ENTER
+STRING $form.Height = 275
+ENTER
+STRING $label = New-Object System.Windows.Forms.Label
+ENTER
+STRING $label.Text = "KERNEL LEVEL MALWARE INJECTED!"
+ENTER
+STRING $label.AutoSize = $true
+ENTER
+STRING $label.Font = New-Object System.Drawing.Font("Arial", 24, [System.Drawing.FontStyle]::Bold)
+ENTER
+STRING $label.ForeColor = 'White'
+ENTER
+STRING $label.Dock = 'Fill'
+ENTER
+STRING $label.TextAlign = 'MiddleCenter'
+ENTER
+STRING $form.Controls.Add($label)
+ENTER
+STRING $form.StartPosition = "CenterScreen"
+ENTER
+STRING $form.ShowDialog()
+ENTER

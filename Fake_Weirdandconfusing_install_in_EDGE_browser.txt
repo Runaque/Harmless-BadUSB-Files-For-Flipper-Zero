@@ -1,0 +1,14 @@
+REM Made by Runaque
+REM This script opens Edge browser, navigates to the Fake update screen, and switches to fullscreen
+GUI r
+DELAY 1000
+STRING msedge
+DELAY 1500
+ENTER
+DELAY 1500
+ALT d
+DELAY 1500
+STRING https://weirdorconfusing.com/
+ENTER
+DELAY 2000
+F11
